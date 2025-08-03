@@ -1,0 +1,80 @@
+<div class="movie-card">
+  <!-- <button
+    class="asWatchedButton"
+    id="wlBtn"
+    (click)="markAsWatched()"
+    [class.is-active]="isWatched$ | async"
+  >
+    <ng-container *ngIf="isWatched$ | async; else plusIcon">
+      <i class="fa-solid fa-check"></i>
+    </ng-container>
+    <ng-template #plusIcon>
+      <i class="fa-solid fa-plus"></i>
+    </ng-template>
+
+    Marks As Watched
+  </button> -->
+  <button
+    *ngIf="!(isWatched$ | async)"
+    class="asWatchedButton add"
+    id="wlBtn"
+    (click)="toggleWatchedStatus()"
+  >
+    <i class="fa-solid fa-plus"></i>
+    Marks As Watched
+  </button>
+
+  <button
+    *ngIf="isWatched$ | async"
+    class="asWatchedButton added is-active"
+    (click)="toggleWatchedStatus()"
+    id="wlBtn"
+  >
+    <i class="fa-solid fa-check"></i>
+    Marks As Watched
+  </button>
+
+  <img
+    *ngIf="movie.poster_path"
+    [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+    [alt]="movie.title + ' poster'"
+    class="movie-poster"
+  />
+
+  <div *ngIf="!movie.poster_path" class="placeholder-poster">
+    <span>No Image</span>
+  </div>
+
+  <div class="movie-info">
+    <h3 class="movie-title">{{ movie.title }}</h3>
+    <div class="movie-meta">
+      <span>
+        <!-- الزر في حالة عدم الإضافة إلى قائمة المشاهدة -->
+        <button
+          id="wlBtn"
+          class="watchlist-btn"
+          *ngIf="!(isWatchList$ | async)"
+          (click)="toggleWatchlistStatus()"
+        >
+          <i class="fa-solid fa-plus"></i>
+          Add to WatchList
+        </button>
+
+        <button
+          id="wlBtn"
+          class="watchlist-btn added"
+          *ngIf="isWatchList$ | async"
+          (click)="toggleWatchlistStatus()"
+          style="background-color: #c82909"
+        >
+          <i class="fa-solid fa-bookmark"></i>
+          Remove
+        </button>
+      </span>
+      <span class="movie-rating">
+        <i class="fa-solid fa-star"></i>
+        {{ movie.vote_average.toFixed(1) }}
+      </span>
+    </div>
+  </div>
+</div>

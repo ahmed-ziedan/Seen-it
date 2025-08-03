@@ -1,0 +1,23 @@
+<div class="page-container">
+  <h1>Watched Movies</h1>
+
+  <div *ngIf="(watchedList$ | async)?.length; else noMovies">
+    <div class="movies-grid">
+      <app-movie-card
+        *ngFor="let movie of watchedList$ | async"
+        [movie]="movie"
+      >
+      </app-movie-card>
+    </div>
+  </div>
+
+  <ng-template #noMovies>
+    <!-- <p class="empty-message" id="empty-message">
+      You haven't marked any movies as watched yet. Go find some!
+    </p> -->
+    <div class="empty-message" id="empty-message">
+      <h1>You haven't marked any movies as watched yet. Go find some!</h1>
+      <div routerLink="/movies-list" class="btn">Return to Movie List</div>
+    </div>
+  </ng-template>
+</div>

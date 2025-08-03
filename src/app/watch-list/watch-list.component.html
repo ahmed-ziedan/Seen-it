@@ -1,0 +1,20 @@
+<div class="page-container">
+  <h1>Watch List</h1>
+
+  <div *ngIf="(watchList$ | async)?.length; else noMovies">
+    <div class="movies-grid">
+      <app-movie-card *ngFor="let movie of watchList$ | async" [movie]="movie">
+      </app-movie-card>
+    </div>
+  </div>
+
+  <ng-template #noMovies>
+    <div class="empty-message" id="empty-message">
+      <h1>
+        You have not added any movies to your watch list yet.<br />
+        Go find some!
+      </h1>
+      <div routerLink="/movies-list" class="btn">Return to Movie List</div>
+    </div>
+  </ng-template>
+</div>

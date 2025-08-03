@@ -1,0 +1,53 @@
+a {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  // max-width: 1200px;
+  margin: 0;
+  padding: 1.5rem 1.5rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+}
+.copy {
+  margin: 0;
+  max-width: 300px;
+}
+
+.navLinks {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.9rem;
+}
+.link i {
+  position: relative;
+  padding-top: 0.75rem;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  &:hover {
+    color: rgb(128, 141, 255);
+  }
+}
+@media (width < 900px) {
+  .navLinks {
+    grid-template-columns: 1fr 200px;
+    display: block;
+    padding-right: 20px;
+  }
+  .navLinks a {
+    padding: 5px;
+  }
+}

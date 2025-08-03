@@ -1,0 +1,66 @@
+a {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+}
+// body {
+//   font-family: "Poppins", sans-serif;
+// }
+
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.navLogo {
+  max-width: 150px;
+}
+.navLogo a {
+  color: white;
+  font-size: 30px;
+  font-weight: 620;
+}
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: white;
+}
+.link a:after {
+  content: "";
+  position: absolute;
+
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.15s ease;
+}
+.link a:hover::after {
+  width: 100%;
+}
+
+@media (width < 800px) {
+  .navLinks {
+    display: none;
+  }
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
