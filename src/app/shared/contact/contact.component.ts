@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import {
+  FormBuilder,
   FormControl,
   FormGroup,
   FormsModule,
@@ -17,6 +19,9 @@ import {
 })
 export class ContactComponent {
   contactForm: FormGroup;
+
+  private fb = inject(FormBuilder);
+  private http = inject(HttpClient);
   constructor() {
     this.contactForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -27,6 +32,14 @@ export class ContactComponent {
 
   onSubmit() {
     console.log(this.contactForm.value);
-    this.contactForm.reset();
+    // this.contactForm.reset();
+
+    const formspreeEndpoint = 'https://formspree.io/f/mldlwvdj';
+
+    this.http.post(formspreeEndpoint, this.contactForm.value).subscribe({
+      next: (response: any) => {
+        this.contactForm.reset();
+      },
+    });
   }
 }

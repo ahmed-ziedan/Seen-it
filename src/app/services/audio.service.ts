@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AudioService {
-  private actionSound = new Audio('/assets/sounds/message-124468.mp3');
+  private actionSound = new Audio(
+    '/assets/sounds/new-notification-07-210334.mp3'
+  );
   constructor() {
     this.actionSound.load();
   }
