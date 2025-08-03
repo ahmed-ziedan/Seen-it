@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { WatchedListService } from '../services/watched-list.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-watched',
   standalone: true,
-  imports: [CommonModule, MovieCardComponent],
+  imports: [CommonModule, MovieCardComponent, RouterLink],
   templateUrl: './watched.component.html',
   styleUrl: './watched.component.scss',
 })

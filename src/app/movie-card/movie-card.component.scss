@@ -84,15 +84,15 @@ div {
   color: white;
 }
 
-#wlBtn.is-active .fa-plus {
-  display: none;
-}
-
-#wlBtn.is-active .fa-check {
+#wlBtn.is-active .fa-remove {
   display: inline-block;
 }
 
-#wlBtn .fa-check {
+#wlBtn.is-active .fa-plus {
+  display: inline-block;
+}
+
+#wlBtn .fa-plus {
   display: none;
 }
 .movie-poster {
