@@ -1,24 +1,30 @@
 <div class="header">
-  <nav>
+  <nav (click)="$event.stopPropagation()">
     <div class="navLogo">
       <a routerLink="/home"> Seen It </a>
     </div>
-    <ul class="navLinks">
+    <ul class="navLinks" [class.active]="isMenuOpen">
       <li class="link">
         <a routerLink="/home">Home</a>
       </li>
       <li class="link">
-        <a routerLink="/movies-list">Movies</a>
+        <a routerLink="/movies-list" (click)="closeMenu()">Movies</a>
       </li>
       <li class="link">
-        <a routerLink="/watch-list">Watch List</a>
+        <a routerLink="/watch-list" (click)="closeMenu()">Watch List</a>
       </li>
       <li class="link">
-        <a routerLink="/watched">Watched</a>
+        <a routerLink="/watched" (click)="closeMenu()">Watched</a>
       </li>
       <li class="link">
-        <a routerLink="/contact">Contact us</a>
+        <a routerLink="/contact" (click)="closeMenu()">Contact us</a>
       </li>
     </ul>
+
+    <div class="burger" (click)="toggleMenu()" [class.toggle]="isMenuOpen">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
   </nav>
 </div>

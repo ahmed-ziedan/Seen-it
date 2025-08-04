@@ -6,6 +6,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   border-radius: 10px;
+
+  @media screen and (max-width: 900px) {
+    max-width: 300px;
+  }
 }
 
 .contact-form h1,
@@ -37,21 +41,6 @@
 .form-group textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-
-// button {
-//   width: 100%;
-//   padding: 10px;
-//   background-color: #f0a500;
-//   border: none;
-//   border-radius: 5px;
-//   color: white;
-//   cursor: pointer;
-//   transition: background-color 0.3s ease;
-// }
-
-// button:hover {
-//   background-color: #d98f00;
-// }
 
 .btn {
   width: 100%;

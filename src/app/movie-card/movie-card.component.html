@@ -1,19 +1,4 @@
 <div class="movie-card">
-  <!-- <button
-    class="asWatchedButton"
-    id="wlBtn"
-    (click)="markAsWatched()"
-    [class.is-active]="isWatched$ | async"
-  >
-    <ng-container *ngIf="isWatched$ | async; else plusIcon">
-      <i class="fa-solid fa-check"></i>
-    </ng-container>
-    <ng-template #plusIcon>
-      <i class="fa-solid fa-plus"></i>
-    </ng-template>
-
-    Marks As Watched
-  </button> -->
   <button
     *ngIf="!(isWatched$ | async)"
     class="asWatchedButton add"

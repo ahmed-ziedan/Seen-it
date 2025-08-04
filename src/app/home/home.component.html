@@ -1,20 +1,112 @@
-<section class="container">
-  <!-- <div class="overlay"></div> -->
-  <div class="content">
-    <!-- <span class="blur"></span>
-    <span class="blur"></span> -->
-    <h1>
-      Track movies you’ve watched.<br />
-      Save those you want to see.<br />
-      Tell your friendswhat’s good.
-    </h1>
+<div class="home">
+  <section class="container">
+    <div class="content">
+      <h1>
+        Track movies you’ve watched.<br />
+        Save those you want to see.<br />
+        Tell your friendswhat’s good.
+      </h1>
 
-    <p>
-      Discover and keep track of your favorite movies and shows. Build your
-      personal watchlist and explore what’s trending now!
+      <p>
+        Discover and keep track of your favorite movies and shows. Build your
+        personal watchlist and explore what’s trending now!
+      </p>
+      <button routerLink="/movies-list" class="btn">
+        Get started — it‘s free!
+      </button>
+    </div>
+  </section>
+
+  <section class="afterWelcome">
+    <h2>Trending Movies</h2>
+    <div class="slider-container">
+      <div class="movies-slider">
+        <div class="movie-card">
+          <img
+            class="movie-poster"
+            src="https://image.tmdb.org/t/p/w500/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg"
+            alt="BALLARINA POSTER"
+          />
+          <div class="movie-info">
+            <h3 class="movie-title">Ballerina</h3>
+            <div class="movie-meta">
+              <span>2025</span>
+              <span class="movie-rating"
+                ><i class="fa-solid fa-star"></i>7.5</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img
+            src="https://image.tmdb.org/t/p/w500/x26MtUlwtWD26d0G0FXcppxCJio.jpg"
+            alt="BARBIE"
+            class="movie-poster"
+          />
+          <div class="movie-info">
+            <h3 class="movie-title">The Fantastic Four</h3>
+            <div class="movie-meta">
+              <span>2025</span>
+              <span class="movie-rating">
+                <i class="fa-solid fa-star"></i>
+                7.1
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img
+            class="movie-poster"
+            src="https://image.tmdb.org/t/p/w500/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg"
+            alt="The Flash"
+          />
+          <div class="movie-info">
+            <h3 class="movie-title">Superman</h3>
+            <div class="movie-meta">
+              <span>2025</span>
+              <span class="movie-rating"
+                ><i class="fa-solid fa-star"></i>7.5</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img
+            class="movie-poster"
+            src="https://image.tmdb.org/t/p/w500/6H6p82aWQFEKEuVUiZll6JxV8Ft.jpg"
+            alt="The Flash"
+          />
+          <div class="movie-info">
+            <h3 class="movie-title">F1</h3>
+            <div class="movie-meta">
+              <span>2025</span>
+              <span class="movie-rating"
+                ><i class="fa-solid fa-star"></i>7.6</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <h2 style="padding-top: 20px">About Us</h2>
+    <p class="about-text">
+      In the golden age of streaming, the world of cinema and television is an
+      endless ocean of content. It's easy to forget that hidden gem you wanted
+      to watch, or wonder, "Have I seen this before?"
+      <br /><br />
+      This is where <strong>Seen It</strong> comes in. We are your personal
+      cinematic companion, designed by movie lovers, for movie lovers. Our
+      mission is simple: to provide you with an elegant and intuitive platform
+      to track your viewing history, build a curated watchlist of future
+      favorites, and discover what's new and trending in the world of
+      entertainment. <br /><br />
+      Whether you're a casual viewer or a dedicated cinephile, Seen It helps you
+      organize your passion. Spend less time searching and more time enjoying.
     </p>
-    <button routerLink="/movies-list" class="btn">
-      Get started — it‘s free!
-    </button>
-  </div>
-</section>
+  </section>
+</div>

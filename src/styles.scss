@@ -26,10 +26,21 @@ body {
       rgba(24, 24, 27, 0.65)
     ),
     url("/assets/imgs/superman-background.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 800px) {
+    background-size: cover;
+    background-position: top;
+  }
 }
 a {
   text-decoration: none;
+}
+@media (width<900px) {
+  .root {
+    background-color: rgba(26, 26, 26, 0.65);
+    backdrop-filter: blur(5px);
+  }
 }
