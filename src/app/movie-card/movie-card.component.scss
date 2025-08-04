@@ -23,7 +23,6 @@ div {
   background-color: rgba(255, 255, 255, 1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   &:hover {
-    // transform: translateY(-3px);
     box-shadow: 0 12px 22px rgba(17, 0, 255, 0.877);
   }
 }
@@ -129,7 +128,7 @@ div {
   color: #f5c518;
   margin-right: 0.3rem;
 }
-@media (width< 900px) {
+@media (width< 800px) {
   .movie-poster {
     max-height: 600px;
   }
