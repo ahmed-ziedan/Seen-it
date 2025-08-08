@@ -1,9 +1,9 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { map, Observable, take } from 'rxjs';
-import { WatchedListService } from '../services/watched-list.service';
+import { WatchedListService } from '../../services/watched-list.service';
 import { CommonModule } from '@angular/common';
-import { WatchListService } from '../services/watch-list.service';
-import { AudioService } from '../services/audio.service';
+import { WatchListService } from '../../services/watch-list.service';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-movie-card',

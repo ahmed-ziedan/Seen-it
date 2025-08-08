@@ -20,7 +20,7 @@ import {
 export class ContactComponent {
   contactForm: FormGroup;
 
-  private fb = inject(FormBuilder);
+  // private fb = inject(FormBuilder);
   private http = inject(HttpClient);
   constructor() {
     this.contactForm = new FormGroup({
@@ -40,7 +40,7 @@ export class ContactComponent {
     const formspreeEndpoint = 'https://formspree.io/f/mldlwvdj';
 
     this.http.post(formspreeEndpoint, this.contactForm.value).subscribe({
-      next: (response: any) => {
+      next: () => {
         this.contactForm.reset();
       },
     });

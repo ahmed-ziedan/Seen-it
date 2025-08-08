@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { Observable } from 'rxjs';
-import { WatchListService } from '../services/watch-list.service';
+import { WatchListService } from '../../services/watch-list.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -15,7 +15,6 @@ import { RouterLink } from '@angular/router';
 export class WatchListComponent {
   public watchList$: Observable<any> | undefined;
 
-  // 2. استخدام الـ constructor لـ "حقن" الخدمة
   constructor(private watchListService: WatchListService) {
     this.watchList$ = this.watchListService.watchList$;
   }
