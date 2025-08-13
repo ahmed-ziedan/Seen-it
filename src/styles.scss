@@ -28,8 +28,8 @@ body {
   // background-size: contain;
   // background-position: top;
   // background-repeat: no-repeat;
-  background-size: cover; /* <-- هذا هو التغيير الأهم */
-  background-position: center; /* <-- الأفضل استخدام center مع cover */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   @media screen and (max-width: 800px) {
