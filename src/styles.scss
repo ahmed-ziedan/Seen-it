@@ -13,23 +13,25 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #18181b;
-  /**/
   width: 100%;
   height: fit-content;
-
   color: #fff;
-  /**/
   position: relative;
-
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   background-image: linear-gradient(
-      rgba(24, 24, 27, 0.65),
-      rgba(24, 24, 27, 0.65)
+      rgba(24, 24, 27, 0.68),
+      rgba(24, 24, 27, 0.68)
     ),
     url("/assets/imgs/superman-background.jpg");
-  background-size: contain;
-  background-position: top;
+  // background-size: contain;
+  // background-position: top;
+  // background-repeat: no-repeat;
+  background-size: cover; /* <-- هذا هو التغيير الأهم */
+  background-position: center; /* <-- الأفضل استخدام center مع cover */
   background-repeat: no-repeat;
-
+  background-attachment: fixed;
   @media screen and (max-width: 800px) {
     background-size: cover;
     background-position: top;
