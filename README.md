@@ -57,7 +57,8 @@ This project was an opportunity to implement and master key web development conc
 
 https://seen-it-one.vercel.app/
 
-
+## Video Demo
+[![Video Demo for Seen It](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=Video&logoColor=white)](https://www.linkedin.com/feed/update/urn:li:activity:7361360007164063745/)
 
 ## Links
 
